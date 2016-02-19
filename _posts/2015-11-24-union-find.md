@@ -62,65 +62,67 @@ excerpt : Algorithm, ACM
 该算法是核心就是int Find(int x)函数，查找x的族长是谁，也就是“请安”，实现如下：
 
 ```c
-	int Find(int x){
-		if(root[x]!=x){
-			root[x]=Find(root[x]);//注意这里更新root[x]的值
-		}
-		return root[x];
+int Find(int x){
+	if(root[x]!=x){
+		root[x]=Find(root[x]);//注意这里更新root[x]的值
 	}
+	return root[x];
+}
 ```
 
 ## 代码
 
-	#include<stdio.h>
-	#define N 5010
-	int root[N];
+```c
+#include<stdio.h>
+#define N 5010
+int root[N];
 
-	//初始化
-	void Init(int n){
-		int i;
-		for(i=0;i<=n;i++){
-			root[i]=i;
-		}
+//初始化
+void Init(int n){
+	int i;
+	for(i=0;i<=n;i++){
+		root[i]=i;
 	}
+}
 
-	//查找祖先
-	int Find(int x){
-		if(root[x]!=x){
-			root[x]=Find(root[x]);
-		}
-		return root[x];
+//查找祖先
+int Find(int x){
+	if(root[x]!=x){
+		root[x]=Find(root[x]);
 	}
+	return root[x];
+}
 
-	//增加一对关系
-	void Add(int a,int b){
-		if(Find(a)!=Find(b)){
-			root[Find(a)]=Find(b);
-		}
+//增加一对关系
+void Add(int a,int b){
+	if(Find(a)!=Find(b)){
+		root[Find(a)]=Find(b);
 	}
+}
 
-	int main(){
-		int n,m,p;
-		int a,b,i,cnt;
-		while(scanf("%d%d%d",&n,&m,&p)!=EOF){//n(1-n)个人，m对关系，p次询问
-			Init(n);
-			while(m--){
-				scanf("%d%d",&a,&b);//a、b有关系
-				Add(a,b);
+int main(){
+	int n,m,p;
+	int a,b,i,cnt;
+	while(scanf("%d%d%d",&n,&m,&p)!=EOF){//n(1-n)个人，m对关系，p次询问
+		Init(n);
+		while(m--){
+			scanf("%d%d",&a,&b);//a、b有关系
+			Add(a,b);
+		}
+		while(p--){
+			scanf("%d%d",&a,&b);//询问a、b是否是有关系
+			printf("%s\n",Find(a)==Find(b)?"Yes":"No");
+		}
+		for(cnt=0,i=1;i<=n;i++){
+			if(i==Find(i)){
+				cnt++;
 			}
-			while(p--){
-				scanf("%d%d",&a,&b);//询问a、b是否是有关系
-				printf("%s\n",Find(a)==Find(b)?"Yes":"No");
-			}
-			for(cnt=0,i=1;i<=n;i++){
-				if(i==Find(i)){
-					cnt++;
-				}
-			}
-			printf("家族数=%d\n",cnt);
 		}
-		return 0;
+		printf("家族数=%d\n",cnt);
 	}
+	return 0;
+}
+```
 
 ## 补充
 
