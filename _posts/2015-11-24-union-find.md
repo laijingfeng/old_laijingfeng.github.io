@@ -61,12 +61,14 @@ excerpt : Algorithm, ACM
 
 该算法是核心就是int Find(int x)函数，查找x的族长是谁，也就是“请安”，实现如下：
 
+```c
 	int Find(int x){
 		if(root[x]!=x){
 			root[x]=Find(root[x]);//注意这里更新root[x]的值
 		}
 		return root[x];
 	}
+```
 
 ## 代码
 
