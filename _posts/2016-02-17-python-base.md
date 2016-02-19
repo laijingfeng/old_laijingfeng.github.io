@@ -22,11 +22,17 @@ excerpt : Python
 转义只能用在第一层，超过和转义符一起显示
 
 > egs:
+>
 > 'lai'->'lai'
+>
 > "lai"->'lai'
+>
 > "lai'jing"->"lai'jing"
+>
 > 'lai\'jing'->"lai'jing"
+>
 > "\"hello\"lai"->'"hello"lai'
+>
 > 'lai"a\'aa"'->'lai"a\'aa"'
 
 可用\n换行
@@ -49,13 +55,13 @@ r去除转义
 
 ```python
 output:1 and hello and 1.1
-print ‘{} and {} and {}’.format(1, ‘hello’, 1.1)
-print ‘{0} and {1} and {2}’.format(1, ‘hello’, 1.1)
+print '{} and {} and {}'.format(1, 'hello', 1.1)
+print '{0} and {1} and {2}'.format(1, 'hello', 1.1)
 print '{one} and {two} and {three}'.format(one=1, two='hello', three=1.1)
 print '{0} and {1} and {three}'.format(1, 'hello', three=1.1)
 
-'12'.zfill(5) => ‘00012’
-'-3.14'.zfill(7) => ‘-003.14’
+'12'.zfill(5) => '00012'
+'-3.14'.zfill(7) => '-003.14'
 
 print '{0:2d}'.format(1)
 print 'PI:{0:.3f}'.format(3.14159) => PI:3.142
@@ -76,16 +82,17 @@ print 'PI:%5.3f' % 3.14159261
 
 **注释**
 
-`#行注释`
+- `#行注释`
+- `两个'''或"""之间块注释`
 
-两个'''或"""之间块注释
-
-变量定义赋值
+**变量定义赋值**
 
 - flag = 0
 - a, b = 0, 1 # 多变量赋值
 
-指定格式:`# -*- coding: UTF-8 -*-`
+**指定编码格式**
+
+`# -*- coding: UTF-8 -*-`
 
 **常用函数**
 
@@ -101,7 +108,7 @@ print 'PI:%5.3f' % 3.14159261
 
 **输出**
 
-print ‘xxx’
+print 'xxx'
 
 后面加逗号可以让下一次输出同行
 
@@ -113,14 +120,14 @@ print xx1, xx2
 
 **算术比较**
 
-- >
-- <
-- ==
-- <=
-- >=
-- !=
+- `>`
+- `<`
+- `==`
+- `<=`
+- `>=`
+- `!=`
 
-**逻辑**
+**逻辑运算**
 
 - and
 
@@ -224,14 +231,17 @@ f.close()
 ```
 
 mode:
+
 - r:只读
 - w:只写(覆盖)
 - a:附加写
 - r+:读写
 - 加b是操作二进制文件，如rb，wb
 
-	for line in f:
-		print line,
+```python
+for line in f:
+	print line,
+```
 
 - f.read([size])
 - f.readline()
@@ -260,13 +270,13 @@ filename.py里定义了fun1和fun2函数
 
 其他形式
 
+```html
 from filename import fun1, fun2
-
 fun1(...)
 
 from filename import *
-
 fun1(...)
+```
 
 引用会生成.pyc文件，这个是最终需要的
 
@@ -340,7 +350,7 @@ funcName(par2=1, par1=2, par5=44)
 
 主函数
 
-if __name__ == ‘__main__’:
+`if __name__ == ‘__main__’:`
 
 函数参数
 
