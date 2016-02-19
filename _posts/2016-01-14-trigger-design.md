@@ -34,26 +34,26 @@ client和editor比较：client资源动态加载，editor没有资源加载步�
 
 因此我们做了下面的设定：
 
-1.触发器引用其他物体的话，配置的肯定的name，在编辑器里拖为子结点，打包资源的时候读取存储name并删除子结点，如下结构：
+1. 触发器引用其他物体的话，配置的肯定的name，在编辑器里拖为子结点，打包资源的时候读取存储name并删除子结点，如下结构：
 
-- xxxTrigger
-	- boss/item
+	- xxxTrigger
+		- boss/item
 	
-2.Father属性editor拖过去操作方便，client加载的时候，要先加载所有Father为空的触发器，其他触发器监听父触发器的onTriggerFinish回调。
+1. Father属性editor拖过去操作方便，client加载的时候，要先加载所有Father为空的触发器，其他触发器监听父触发器的onTriggerFinish回调。
 
-3.触发器的创建流程
+1. 触发器的创建流程
 
-几个关键函数（按执行顺序）：
+	几个关键函数（按执行顺序）：
 
-- Init：初始化，设置属性，client才执行
-- Awake：检查是否有配置信息，比如子结点，有则设置为enable=false，editor用，为了默认隐藏有Father的触发器
-- Start：没有父节点则进入OnTrigger，有Father则设置监听Father的onTriggerFinish，在回调里执行OnTrigger
-- OnTrigger：触发器开始，没有子结点的话加载需要的子结点资源
-- OnFinish：触发器结束，设置m_bIsLive来保证只有一次回调，在OnDestroy也执行OnFinish保证一定执行一次
+	- Init：初始化，设置属性，client才执行
+	- Awake：检查是否有配置信息，比如子结点，有则设置为enable=false，editor用，为了默认隐藏有Father的触发器
+	- Start：没有父节点则进入OnTrigger，有Father则设置监听Father的onTriggerFinish，在回调里执行OnTrigger
+	- OnTrigger：触发器开始，没有子结点的话加载需要的子结点资源
+	- OnFinish：触发器结束，设置m_bIsLive来保证只有一次回调，在OnDestroy也执行OnFinish保证一定执行一次
 
-4.其他
+1. 其他
 
-client中可能会需要在CopyState知道触发器死亡，用来算积分之类的，为了保持Level的通用性，让Level监听触发器死亡，其他地方再监听Level的回调
+	client中可能会需要在CopyState知道触发器死亡，用来算积分之类的，为了保持Level的通用性，让Level监听触发器死亡，其他地方再监听Level的回调
 
 ## TriggerTimer（时间触发器）
 
