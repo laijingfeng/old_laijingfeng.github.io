@@ -17,7 +17,7 @@ excerpt : Blog
 
 根目录增加favicon.ico
 
-在`\_includes\themes\bootstrap-3\default.html`，增加
+在`\=includes\themes\bootstrap-3\default.html`，增加
 
 `<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />`
 
@@ -27,7 +27,7 @@ excerpt : Blog
 
 ##### 屏蔽评论
 
-在`\_includes\themes\bootstrap-3\post.html`
+在`\=includes\themes\bootstrap-3\post.html`
 
 ```html
 <!-- 去掉评论，加速 -->
@@ -36,7 +36,7 @@ excerpt : Blog
 
 ##### jequry.mini.js换国内源
 
-在`\_includes\themes\bootstrap-3\default.html`
+在`\=includes\themes\bootstrap-3\default.html`
 
 ```html
 <!-- 更换jquery.mini.js地址 -->
@@ -46,7 +46,7 @@ excerpt : Blog
 
 ##### 屏蔽Google分析
 
-在`\_includes\themes\bootstrap-3\default.html`
+在`\=includes\themes\bootstrap-3\default.html`
 
 ```html
 <!-- 去掉分析，加速 -->
@@ -55,7 +55,7 @@ excerpt : Blog
 
 ##### 屏蔽Search
 
-在`\_includes\themes\bootstrap-3\default.html`
+在`\=includes\themes\bootstrap-3\default.html`
 
 ```html
 <!-- Search好像没有什么用，屏蔽 -->
@@ -71,7 +71,7 @@ excerpt : Blog
 
 ##### 屏蔽订阅
 
-在`\_includes\themes\bootstrap-3\default.html`
+在`\=includes\themes\bootstrap-3\default.html`
 
 ```html
 <!-- atom & rss feed -->
