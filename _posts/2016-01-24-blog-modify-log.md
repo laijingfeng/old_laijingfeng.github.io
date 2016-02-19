@@ -68,3 +68,14 @@ excerpt : Blog
 	<!-- atom & rss feed -->
 	<!-- <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed"> -->
 	<!-- <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+
+## 2016-02-19 换博客
+
+之前的内容基于[旧博客]()，不再更新
+
+Github升级了Jekyll3.0，原有博客出问题了，重新寻找了一个
+
+在[JekyllThemes](http://jekyllthemes.org/)找的[Cool Concise High-end](http://jekyllthemes.org/themes/cool-concise-high-end/)。
+
+做了一些精简，去掉了评论、去除Demo导航...
+
