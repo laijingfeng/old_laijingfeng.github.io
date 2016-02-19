@@ -19,7 +19,9 @@ excerpt : Blog
 
 在`\=includes\themes\bootstrap-3\default.html`，增加
 
-`<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />`
+```html
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
+```
 
 `_config.yml`增加`baseurl : `
 
@@ -31,7 +33,7 @@ excerpt : Blog
 
 ```html
 <!-- 去掉评论，加速 -->
-<!-- {% include JB/comments %} -->
+
 ```
 
 ##### jequry.mini.js换国内源
@@ -50,7 +52,7 @@ excerpt : Blog
 
 ```html
 <!-- 去掉分析，加速 -->
-<!-- {% include JB/analytics %} -->
+
 ```
 
 ##### 屏蔽Search
