@@ -11,6 +11,8 @@ excerpt : Blog, Jekyll
 
 ## 概述
 
+文章所述基于[旧博客](https://github.com/laijingfeng/old_laijingfeng.github.io)
+
 本博客通过[Jekyll Bootstrap](http://jekyllbootstrap.com/)创建，原生对markdown的配置并不全，补充一二。
 
 我用的是bootstrap-3主题，所以下面说的配置都是在这个主题下做的。
