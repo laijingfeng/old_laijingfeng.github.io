@@ -305,7 +305,38 @@ pass为了语法正确暂时没有内容，跳过
 - range(int num1, int num2) # [num1, num1+1, ..., num2-1]
 - rang(int num1, int num2, int step) # [num1, num1+step, ..., num1+n*step<=num2-1]
 
-## 函数
+## 模块
+
+filename.py里定义了fun1和fun2函数
+
+在其他脚本里，import filename，然后可以形如filename.funname使用filename.py里的函数
+
+其他形式
+
+```html
+from filename import fun1, fun2
+fun1(...)
+
+from filename import *
+fun1(...)
+```
+
+引用会生成.pyc文件，这个是最终需要的
+
+如果有包名，则import xx.xx.filename，使用是xx.xx.filename.funname
+
+包就是一个文件夹，需要包含一个__init__.py文件，可以是空文件
+
+### 标准模块
+
+dir([name])列出[name]模块定义的变量
+
+- sys
+- os
+
+sys.path 环境变量
+
+### 函数
 
 ```python
 def funcName(par1, par2, par3=1, par4=i, par5=9):
@@ -333,34 +364,3 @@ funcName(par2=1, par1=2, par5=44)
 sys.argv是参数列表，第0个参数是脚本名
 
 exit()退出
-
-### 模块
-
-filename.py里定义了fun1和fun2函数
-
-在其他脚本里，import filename，然后可以形如filename.funname使用filename.py里的函数
-
-其他形式
-
-```html
-from filename import fun1, fun2
-fun1(...)
-
-from filename import *
-fun1(...)
-```
-
-引用会生成.pyc文件，这个是最终需要的
-
-如果有包名，则import xx.xx.filename，使用是xx.xx.filename.funname
-
-包就是一个文件夹，需要包含一个__init__.py文件，可以是空文件
-
-#### 标准模块
-
-dir([name])列出[name]模块定义的变量
-
-- sys
-- os
-
-sys.path 环境变量
