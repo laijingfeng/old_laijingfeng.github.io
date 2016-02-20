@@ -268,6 +268,7 @@ f.closed # 文件是否关闭
 - 获取当前文件相对目录:`sys.argv[0]`
 - 获取当前文件绝对目录:`os.path.abspath(sys.argv[0])`
 - python操作Windows目录可以用左斜杠`/`，也可以用`\\`
+- `os.path.split(path)`，把path分成路径和文件名两部分
 
 ## 控制流
 
@@ -364,3 +365,24 @@ funcName(par2=1, par1=2, par5=44)
 sys.argv是参数列表，第0个参数是脚本名
 
 exit()退出
+
+## 执行Shell命令
+
+参考:[python中执行shell命令的几个方法小结](http://www.jb51.net/article/55327.htm)
+
+1. `os.system()`
+	如`os.system('cat /proc/cpuinfo')`，命令执行结果只有0或者1。
+1. `os.open()`
+	
+	```python
+	output = os.popen('cat /proc/cpuinfo')
+	print output.read()
+	```
+	
+	通过os.popen()返回的是file read的对象，对其进行读取read()的操作可以看到执行的输出。但是无法读取程序执行的返回值。
+1. `commands.getstatusoutput()`
+	
+	```python
+	(status, output) = commands.getstatusoutput('cat /proc/cpuinfo')
+	print status, output
+	```
