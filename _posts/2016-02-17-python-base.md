@@ -270,6 +270,8 @@ f.closed # 文件是否关闭
 - python操作Windows目录可以用左斜杠`/`，也可以用`\\`
 - `os.path.split(path)`，把path分成路径和文件名两部分
 
+更多参考:[python文件和路径操作](http://www.cnblogs.com/bluescorpio/archive/2009/11/21/1607446.html)
+
 ## 控制流
 
 ### 条件
