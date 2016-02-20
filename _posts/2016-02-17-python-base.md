@@ -375,14 +375,18 @@ exit()退出
 1. `os.open()`
 	
 	```python
-	output = os.popen('cat /proc/cpuinfo')
-	print output.read()
+		output = os.popen('cat /proc/cpuinfo')
+		print output.read()
 	```
+	
+		```python
+		output = os.popen('cat /proc/cpuinfo')
+		print output.read()
+		```
 	
 	通过os.popen()返回的是file read的对象，对其进行读取read()的操作可以看到执行的输出。但是无法读取程序执行的返回值。
 1. `commands.getstatusoutput()`
 	
-	```python
-	(status, output) = commands.getstatusoutput('cat /proc/cpuinfo')
-	print status, output
-	```
+		(status, output) = commands.getstatusoutput('cat /proc/cpuinfo')
+		print status, output
+	
