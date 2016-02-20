@@ -374,15 +374,8 @@ exit()退出
 	如`os.system('cat /proc/cpuinfo')`，命令执行结果只有0或者1。
 1. `os.open()`
 	
-	```python
 		output = os.popen('cat /proc/cpuinfo')
 		print output.read()
-	```
-	
-		```python
-		output = os.popen('cat /proc/cpuinfo')
-		print output.read()
-		```
 	
 	通过os.popen()返回的是file read的对象，对其进行读取read()的操作可以看到执行的输出。但是无法读取程序执行的返回值。
 1. `commands.getstatusoutput()`
