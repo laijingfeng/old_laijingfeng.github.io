@@ -371,6 +371,7 @@ exit()退出
 参考:[python中执行shell命令的几个方法小结](http://www.jb51.net/article/55327.htm)
 
 1. `os.system()`
+	
 	如`os.system('cat /proc/cpuinfo')`，命令执行结果只有0或者1。
 1. `os.open()`
 	
