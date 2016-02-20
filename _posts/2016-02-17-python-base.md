@@ -262,36 +262,12 @@ with open('lai.txt', 'r') as f:
 
 f.closed # 文件是否关闭
 
-## 模块
+### 路径处理
 
-filename.py里定义了fun1和fun2函数
-
-在其他脚本里，import filename，然后可以形如filename.funname使用filename.py里的函数
-
-其他形式
-
-```html
-from filename import fun1, fun2
-fun1(...)
-
-from filename import *
-fun1(...)
-```
-
-引用会生成.pyc文件，这个是最终需要的
-
-如果有包名，则import xx.xx.filename，使用是xx.xx.filename.funname
-
-包就是一个文件夹，需要包含一个__init__.py文件，可以是空文件
-
-### 标准模块
-
-dir([name])列出[name]模块定义的变量
-
-- sys
-- os
-
-sys.path 环境变量
+- 获取执行目录:`os.getcwd()`
+- 获取当前文件相对目录:`sys.argv[0]`
+- 获取当前文件绝对目录:`os.path.abspath(sys.argv[0])`
+- python操作Windows目录可以用左斜杠`/`，也可以用`\\`
 
 ## 控制流
 
@@ -350,10 +326,41 @@ funcName(par2=1, par1=2, par5=44)
 
 主函数
 
-`if __name__ == ‘__main__’:`
+`if __name__ == '__main__':`
 
 函数参数
 
 sys.argv是参数列表，第0个参数是脚本名
 
 exit()退出
+
+### 模块
+
+filename.py里定义了fun1和fun2函数
+
+在其他脚本里，import filename，然后可以形如filename.funname使用filename.py里的函数
+
+其他形式
+
+```html
+from filename import fun1, fun2
+fun1(...)
+
+from filename import *
+fun1(...)
+```
+
+引用会生成.pyc文件，这个是最终需要的
+
+如果有包名，则import xx.xx.filename，使用是xx.xx.filename.funname
+
+包就是一个文件夹，需要包含一个__init__.py文件，可以是空文件
+
+#### 标准模块
+
+dir([name])列出[name]模块定义的变量
+
+- sys
+- os
+
+sys.path 环境变量
