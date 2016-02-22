@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual C# WindowsFromsApplication 开发小记 
-date: 2016-02-22 09:25:32
+title: Visual_C#_WindowsFromsApplication开发小记 
+date: 2016-02-22 00:00:00
 categories: WindowsForms
 excerpt : WindowsForms
 ---
