@@ -22,25 +22,25 @@ excerpt : GitHub
 
 说明：参考[1. Git安装与配置](http://blog.csdn.net/renfufei/article/details/41647875)
 
-关键步骤直接看图
+1. 关键步骤(直接看图)
 
-![001](/assets/blog-images/2016-01/001.png)
+	![001](/assets/blog-images/2016-01/001.png)
 
-![002](/assets/blog-images/2016-01/002.png)
+	![002](/assets/blog-images/2016-01/002.png)
 
-![003](/assets/blog-images/2016-01/003.png)
+	![003](/assets/blog-images/2016-01/003.png)
 
-可以在cmd里面测试是否设置了Path，是否安装成功。在CMD中输入`git`或者`git --version`
+1. 可以在cmd里面测试是否设置了Path，是否安装成功。在CMD中输入`git`或者`git --version`
 
-设置本地机器默认commit的昵称和Email
+	设置本地机器默认commit的昵称和Email
 
-	git config --global user.name "laijingfeng"  
-	git config --global user.email "337292616@qq.com"  
-	git config --global push.default simple
+		git config --global user.name "laijingfeng"  
+		git config --global user.email "337292616@qq.com"  
+		git config --global push.default simple
 
-查看设置
+	查看设置
 
-	git config -l
+		git config -l
 
 ### 安装TortoiseGit
 
@@ -48,17 +48,17 @@ excerpt : GitHub
 
 ## 生成SSH Key
 
-选择Puttygen
+1. 选择Puttygen
 
-![004](/assets/blog-images/2016-01/004.png)
+	![004](/assets/blog-images/2016-01/004.png)
 
-Puttygen是按照鼠标运行的轨迹来计算的，点了Generate之后鼠标在空白区域乱画就行
+1. Puttygen是按照鼠标运行的轨迹来计算的，点了Generate之后鼠标在空白区域乱画就行
 
-把PublicKey（rsa-key-xxxxxxxx之前的部分/好像全部也可以）复制，在github个人设置(`https://github.com/settings/profile`)的SSH keys里增加一条。（github的注册等略过）
+	把PublicKey（rsa-key-xxxxxxxx之前的部分/好像全部也可以）复制，在github个人设置(`https://github.com/settings/profile`)的SSH keys里增加一条。（github的注册等略过）
 
-![005](/assets/blog-images/2016-01/005.png)
+	![005](/assets/blog-images/2016-01/005.png)
 
-选择Save private key，保存到一个文件里，后面用。
+1. 选择Save private key，保存到一个文件里，后面用。
 
 ## 创建工程
 
