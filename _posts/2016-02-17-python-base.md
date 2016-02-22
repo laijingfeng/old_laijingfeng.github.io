@@ -368,6 +368,16 @@ sys.argv是参数列表，第0个参数是脚本名
 
 exit()退出
 
+### 库安装
+
+1. 源码`Source`安装
+	
+	下载安装包，解压，里面会有`setup.py`，进入文件夹执行`sudo python install`
+
+1. `pip`安装
+
+	参考：[pip安装使用详解](http://www.ttlsa.com/python/how-to-install-and-use-pip-ttlsa/)
+	
 ## 执行Shell命令
 
 参考:[python中执行shell命令的几个方法小结](http://www.jb51.net/article/55327.htm)
@@ -385,4 +395,22 @@ exit()退出
 	
 		(status, output) = commands.getstatusoutput('cat /proc/cpuinfo')
 		print status, output
-	
+1. `subprocess`
+
+	直接看一个示例，就是把shell命令按空格拆成args组执行
+
+		import subprocess
+
+		# 执行shell命令，wait，T为同步，F为异步
+		def execute_shell_command(args, wait='T'):
+			p = subprocess.Popen(args)
+			if wait == 'T':
+				ret = p.wait()
+				return ret
+			else:
+				return 0
+		
+		# 一个使用，"rm ${HOME_PATH}/lai.png"
+		def one_use():
+			args = ['rm', HOME_PATH + '/lai.png']
+			execute_shell_command(args, 'F')
