@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Windows下GitHub环境配置
+title: Windows下GitHub环境配置和使用
 date: 2016-01-23 00:00:00
 categories: GitHub
 excerpt : GitHub
