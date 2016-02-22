@@ -28,3 +28,7 @@ excerpt : WindowsForms
 ## 最小化到托盘
 
 ...
+
+## 开机自动启动
+
+...
