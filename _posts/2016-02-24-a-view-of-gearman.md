@@ -81,6 +81,6 @@ excerpt : Gearman小探
 		# php test.php
 		1.1.2
 
-	
+1. [php文档](http://php.net/manual/en/book.gearman.php)
 
 
