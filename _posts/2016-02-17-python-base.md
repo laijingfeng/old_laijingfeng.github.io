@@ -220,7 +220,18 @@ a = (1, 2, 'lai')
 
 ### Dictionary
 
+#### 创建
+
+```python
+dict = {'name':'laijingfeng', 'year':2016}
+print dict['name']
+```
+
+#### 修改
+
 ...
+
+参考：[Python 字典(Dictionary)操作详解](http://www.jb51.net/article/47990.htm)
 
 ## 文件操作
 
@@ -395,6 +406,7 @@ exit()退出
 	
 		(status, output) = commands.getstatusoutput('cat /proc/cpuinfo')
 		print status, output
+		
 1. `subprocess`
 
 	直接看一个示例，就是把shell命令按空格拆成args组执行
