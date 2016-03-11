@@ -9,7 +9,7 @@ excerpt : Gearman小探
 * content
 {:toc}
 
-## 概述1
+## 概述
 
 [Gearman](http://gearman.org/)是一个简单的分布式框架，支持多语言，Client+Job+Worker，盗几张官网的图来示意。
 
