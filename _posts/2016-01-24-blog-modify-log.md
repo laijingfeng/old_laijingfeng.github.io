@@ -13,6 +13,20 @@ excerpt : Blog
 
 博客的更新日志
 
+## 2016-03-11 Bug记录
+
+经常加了一篇文章，一直刷不出来，多次观察觉得是和时间有关，博客生成系统的时间和我们填写的时间不同步，暂时尝试的方式是今天写文章，写昨天的日期
+
+## 2016-02-19 换博客
+
+之前的内容基于[旧博客](https://github.com/laijingfeng/old_laijingfeng.github.io)，不再更新
+
+Github升级了Jekyll3.0，原有博客出问题了，重新寻找了一个
+
+在[JekyllThemes](http://jekyllthemes.org/)找的[Cool Concise High-end](http://jekyllthemes.org/themes/cool-concise-high-end/)。
+
+做了一些精简，去掉了评论、去除Demo导航...，另外代码格式更符合MarkDown
+
 ## 2016-01-25 增加favicon
 
 根目录增加favicon.ico
@@ -80,14 +94,4 @@ excerpt : Blog
 <!-- <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed"> -->
 <!-- <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
 ```
-
-## 2016-02-19 换博客
-
-之前的内容基于[旧博客](https://github.com/laijingfeng/old_laijingfeng.github.io)，不再更新
-
-Github升级了Jekyll3.0，原有博客出问题了，重新寻找了一个
-
-在[JekyllThemes](http://jekyllthemes.org/)找的[Cool Concise High-end](http://jekyllthemes.org/themes/cool-concise-high-end/)。
-
-做了一些精简，去掉了评论、去除Demo导航...，另外代码格式更符合MarkDown
 
