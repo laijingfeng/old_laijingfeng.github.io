@@ -35,6 +35,7 @@ PlayerMaker可以快速创建状态机，制作游戏Demo。
 - SetProperty
 - TestBool
 - Random
+- SetAnimatorValue
 
 脚本触发状态机：
 
