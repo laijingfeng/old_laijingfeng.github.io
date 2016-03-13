@@ -24,18 +24,62 @@ PlayerMaker可以快速创建状态机，制作游戏Demo。
 - [Playmaker全面实践教程之简单的使用Playmaker示例](http://my.oschina.net/u/1585857/blog/419983)
 - [Playmaker全面实践教程之Playmaker常用工具](http://my.oschina.net/u/1585857/blog/420460)
 
+官网教程：
+
+
+
 > 备注：本文使用版本Unity5.3.1f1和PlayerMaker1.7.7f6
 
 ## 细节
 
 流程：[GlobalEvent->]State(Actions)->(Event)->State(Actions)
 
+### Action
+
 常用Actions：
 
 - SetProperty
-- TestBool
 - Random
 - SetAnimatorValue
+- GetKeyDown 按键输入
+- PlayAnimation 播放动画，可以使用Blend过渡两个动画
+- GetAxisVector 获得Horizontal和Vertical
+- ControllerSimpleMove 控制移动
+- LookAt 面向某个方向
+- SendEvent 发送事件，可以发送给指定的FSMComponent
+- PlaySound 播放音效
+- 数值
+	- IntAdd 增加int值
+	- IntCompare 比较int值
+	- TestBool 查看bool值
+- Random
+	- SelectRandomString 在设置好的字符串中根据权重选择一个
+	- RandomFloat 在一个范围随机一个浮点数
+- MousePick 鼠标选中
+- FindClosest
+- SetFsmFloat
+- GameObjectChanged 指定的GameObject发生了变化
+- GameObjectCompareTag 比较GameObject的Tag
+- GameObjectTagSwitch
+- SetMouseCursor 设置鼠标状态
+- GetStringLength
+- GetStringLeft 截取字符串
+- SetPosition
+- ActiveGameObject
+- GetName
+- Translate
+- SmoothLookAtDirection
+- TriggerEvent
+
+一个状态的Actions就是这个状态要做的事，一般只做一次，若是设置EveryFrame则是每帧执行
+
+### Event
+
+系统Events：
+
+- FINISHED
+- MOUSE_OVER
+- MOUSE_EXIT
 
 脚本触发状态机：
 
