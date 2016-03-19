@@ -11,12 +11,13 @@ excerpt : PlayerMaker
 
 ## 概述
 
-PlayerMaker可以快速创建状态机，制作游戏Demo。
+PlayerMaker可以快速创建状态机，制作游戏，尤其适合做Demo。
 
 下载分享：[360云盘](https://yunpan.cn/cYrZRdkGUEPjK)（访问密码：0be9）
 
 快速了解：
 
+- [Playmaker全面实践教程Input篇](http://wenku.it168.com/d_001616632.shtml)
 - [Playmaker Input篇教程之Playmaker购买下载和导入](http://my.oschina.net/u/1585857/blog/417643)
 - [Playmaker Input篇教程之PlayMaker菜单概述](http://my.oschina.net/u/1585857/blog/418091)
 - [Playmaker Input篇教程之引入的核心概念](http://my.oschina.net/u/1585857/blog/418586)
@@ -24,9 +25,15 @@ PlayerMaker可以快速创建状态机，制作游戏Demo。
 - [Playmaker全面实践教程之简单的使用Playmaker示例](http://my.oschina.net/u/1585857/blog/419983)
 - [Playmaker全面实践教程之Playmaker常用工具](http://my.oschina.net/u/1585857/blog/420460)
 
-官网教程：
+官网：
 
-
+- [官网](http://www.hutonggames.com/)
+- [Samples](http://www.hutonggames.com/samples.php)
+	- [M2H GAME EXAMPLES](https://hutonggames.fogbugz.com/default.asp?W880)
+		- [Res](https://www.assetstore.unity3d.com/en/#!/content/116)
+- [2D教程](https://github.com/jeanfabre/PlayMaker--UnityLearn--2dPlatformer)
+- [User Totorials](https://hutonggames.fogbugz.com/default.asp?W548)
+- [FQA](https://hutonggames.fogbugz.com/default.asp?W624)
 
 > 备注：本文使用版本Unity5.3.1f1和PlayerMaker1.7.7f6
 
@@ -72,6 +79,8 @@ PlayerMaker可以快速创建状态机，制作游戏Demo。
 - TriggerEvent
 
 一个状态的Actions就是这个状态要做的事，一般只做一次，若是设置EveryFrame则是每帧执行
+
+> 可以自己扩展Action
 
 ### Event
 
