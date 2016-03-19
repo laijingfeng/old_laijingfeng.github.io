@@ -18,6 +18,22 @@ excerpt : GitHub
 
 我的工具获取地址：[360云盘·我的工具](https://yunpan.cn/crx4EiiNVFGRM)(访问密码:96d4)
 
+### 注册github
+
+1. 到[官网](https://github.com/)
+
+1. 填写用户名/邮箱/密码
+
+	![009](/assets/blog-images/2016-01/009.png)
+
+1. 设置
+
+	![010](/assets/blog-images/2016-01/010.png)
+
+### 创建一个仓库
+
+	![011](/assets/blog-images/2016-01/011.png)
+	
 ### 安装msysgit
 
 说明：参考[1. Git安装与配置](http://blog.csdn.net/renfufei/article/details/41647875)
@@ -30,7 +46,7 @@ excerpt : GitHub
 
 	![003](/assets/blog-images/2016-01/003.png)
 
-1. 可以在cmd里面测试是否设置了Path，是否安装成功。在CMD中输入`git`或者`git --version`
+1. 可以在cmd里面测试是否设置了Path，是否安装成功。在CMD中输入`git`或者`git --version`，命令存在则成功。
 
 	设置本地机器默认commit的昵称和Email
 
@@ -45,6 +61,8 @@ excerpt : GitHub
 ### 安装TortoiseGit
 
 直接安装
+
+如果遇到提示msi无法安装
 
 ## 生成SSH Key
 
