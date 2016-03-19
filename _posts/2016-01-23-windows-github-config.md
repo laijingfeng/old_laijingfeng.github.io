@@ -32,7 +32,7 @@ excerpt : GitHub
 
 ### 创建一个仓库
 
-	![011](/assets/blog-images/2016-01/011.png)
+![011](/assets/blog-images/2016-01/011.png)
 	
 ### 安装msysgit
 
