@@ -43,7 +43,7 @@ PlayerMaker可以快速创建状态机，制作游戏，尤其适合做Demo。
 
 ### Action
 
-常用Actions：
+#### 常用Actions
 
 - SetProperty
 - Random
@@ -80,7 +80,9 @@ PlayerMaker可以快速创建状态机，制作游戏，尤其适合做Demo。
 
 一个状态的Actions就是这个状态要做的事，一般只做一次，若是设置EveryFrame则是每帧执行
 
-> 可以自己扩展Action
+#### 自定义Action
+
+
 
 ### Event
 
