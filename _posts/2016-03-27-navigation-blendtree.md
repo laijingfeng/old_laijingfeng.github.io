@@ -15,8 +15,8 @@ excerpt : Navigation and BlendTree
 
 | Left180 | Left90 | Forward | Right90 | Right180 |
 | :---: | :---: | :---: | :---: | :---: |
-| RunLeft180 | RunLeft90 | RunForward | RunRight90 | RunRight180 |
-| WalkLeft180 | WalkLeft90 | WalkForward | WalkRight90 | WalkRight180 |
+| RunLeftSharp | RunLeft | RunForward | RunRight | RunRightSharp |
+| WalkLeftSharp | WalkLeft | WalkForward | WalkRight | WalkRightSharp |
 | TurnLeft180 | TurnLeft90 | Idle | TurnRight90 | TurnRight180 |
 
 ## Navigation
