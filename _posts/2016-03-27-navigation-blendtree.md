@@ -11,6 +11,8 @@ excerpt : Navigation and BlendTree
 
 ## BleedTree
 
+15(或9)个动作，通过Turn和Forward两个参数融合出各种行走，参数可用Navigation模拟。
+
 | Left180 | Left90 | Forward | Right90 | Right180 |
 | :---: | :---: | :---: | :---: | :---: |
 | RunLeft180 | RunLeft90 | RunForward | RunRight90 | RunRight180 |
@@ -19,9 +21,21 @@ excerpt : Navigation and BlendTree
 
 ## Navigation
 
-- 隔离
-- 自定义隔离路线
-- 动态障碍
+## 设置Navigation
+
+和Scene关联
+
+## 隔离
+
+OffMeshLink Generatic + Distance
+
+## 自定义隔离路线
+
+OffMeshLink
+
+## 障碍物和动态障碍
+
+Navmesh Obstacle
 
 参考：
 
