@@ -231,8 +231,9 @@ public class Test : MonoBehaviour
 > 1. 数据类可以包含方法。
 > 1. 要用到不定组数据，就要用数组属性。
 > 1. 可以用来解析协议数据，也可以用来做本地数据存档。
+> 1. 不限于Unity，.Net平台即可用。
 
 ## 参考
 
-- http://www.jiaonan.tv/html/blog/1/27727.htm
-- http://lbv.github.io/litjson/docs/quickstart.html
+- [.NET平台开源JSON库LitJSON的使用方法](http://www.jiaonan.tv/html/blog/1/27727.htm)
+- [LitJSON Quickstart Guide](http://lbv.github.io/litjson/docs/quickstart.html)
