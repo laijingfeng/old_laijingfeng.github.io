@@ -38,10 +38,17 @@ public class Test : MonoBehaviour
     {
         C1 c1 = new C1();
         SaveData<C1>(c1, "testData");
-        C1 c2 = LoadData<C1>("testData");
+        C1 c2 = LoadDataByData<C1>("testData");
         if (c2 != null)
         {
             c2.Print();
+        }
+
+        C3 ca = new C3();
+        C3 cb = LoadDataByName<C3>(ca.GetJsonData());
+        if (cb != null)
+        {
+            cb.Print();
         }
     }
 
@@ -51,9 +58,29 @@ public class Test : MonoBehaviour
     /// <typeparam name="T"></typeparam>
     /// <param name="dataName"></param>
     /// <returns></returns>
-    private T LoadData<T>(string dataName)
+    private T LoadDataByName<T>(string dataName)
     {
         string strData = PlayerPrefs.GetString(dataName, string.Empty);
+        T t = default(T);
+        try
+        {
+            t = LitJson.JsonMapper.ToObject<T>(strData);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("error:" + ex.Message);
+        }
+        return t;
+    }
+
+    /// <summary>
+    /// 加载数据
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="strData"></param>
+    /// <returns></returns>
+    private T LoadDataByData<T>(string strData)
+    {
         T t = default(T);
         try
         {
@@ -151,6 +178,63 @@ public struct S1
 {
     public int ia;
     public uint ib;
+}
+
+public class C3
+{
+    public int id;
+    public string name;
+    public int[] count;
+    public C4[] classB;
+
+    public C3()
+    {
+        id = 1;
+        name = "name";
+        count = new int[1] { 1 };
+        classB = new C4[1] { new C4() };
+    }
+
+    public string GetJsonData()
+    {
+        string data = @"
+        {
+            ""id"" : 2015,
+            ""name"" : ""jerrylai"",
+            ""count"" : [1,2,3],
+            ""classB"" : [
+                {
+                    ""num"" : 10,
+                    ""address"" : ""SH""
+                },
+                {
+                    ""num"" : 11,
+                    ""address"" : ""NB""
+                }
+            ]
+        }";
+        return data;
+    }
+
+    /// <summary>
+    /// 打印
+    /// </summary>
+    public void Print()
+    {
+        Debug.LogError(string.Format("id={0},name={1}", id, name));
+    }
+}
+
+public class C4
+{
+    public int num;
+    public string address;
+
+    public C4()
+    {
+        num = 1;
+        address = "address";
+    }
 }
 ```
 
