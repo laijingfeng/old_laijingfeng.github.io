@@ -38,14 +38,14 @@ public class Test : MonoBehaviour
     {
         C1 c1 = new C1();
         SaveData<C1>(c1, "testData");
-        C1 c2 = LoadDataByData<C1>("testData");
+        C1 c2 = LoadData<C1>("testData");
         if (c2 != null)
         {
             c2.Print();
         }
 
         C3 ca = new C3();
-        C3 cb = LoadDataByName<C3>(ca.GetJsonData());
+        C3 cb = AnalysisData<C3>(ca.GetJsonData());
         if (cb != null)
         {
             cb.Print();
@@ -58,7 +58,7 @@ public class Test : MonoBehaviour
     /// <typeparam name="T"></typeparam>
     /// <param name="dataName"></param>
     /// <returns></returns>
-    private T LoadDataByName<T>(string dataName)
+    private T LoadData<T>(string dataName)
     {
         string strData = PlayerPrefs.GetString(dataName, string.Empty);
         T t = default(T);
@@ -74,12 +74,12 @@ public class Test : MonoBehaviour
     }
 
     /// <summary>
-    /// 加载数据
+    /// 解析数据
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="strData"></param>
     /// <returns></returns>
-    private T LoadDataByData<T>(string strData)
+    private T AnalysisData<T>(string strData)
     {
         T t = default(T);
         try
