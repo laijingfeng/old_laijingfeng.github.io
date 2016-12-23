@@ -9,7 +9,5 @@ If you want to display only the posts in a certain tag/category (and not all pos
 
 {% for post in site.tags['whatever'] %}
 
-{% for post in site.categories['whatever'] %}
-
 ===========
 
